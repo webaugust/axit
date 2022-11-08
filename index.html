@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>AXIT</title>
+
+	
+	
+</head>
+<body>
+
+<!-- Sprite
+================================== -->
+<svg style="display: none;">
+
+	<symbol id="facebook" viewBox="0 0 430.113 430.114">
+		<g>
+			<path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+			c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+			c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+		</g>
+	</symbol>
+
+	<symbol id="twitter" viewBox="0 0 612 612">
+		<g>
+			<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+		</g>
+	</symbol>
+
+	<symbol id="google" viewBox="0 0 475.092 475.092">
+		<g>
+			<path d="M273.372,302.498c-5.041-6.762-10.608-13.045-16.7-18.842c-6.091-5.804-12.183-11.088-18.271-15.845
+			c-6.092-4.757-11.659-9.329-16.702-13.709c-5.042-4.374-9.135-8.945-12.275-13.702c-3.14-4.757-4.711-9.61-4.711-14.558
+			c0-6.855,2.19-13.278,6.567-19.274c4.377-5.996,9.707-11.799,15.986-17.417c6.28-5.617,12.559-11.753,18.844-18.415
+			c6.276-6.665,11.604-15.465,15.985-26.412c4.373-10.944,6.563-23.458,6.563-37.542c0-16.75-3.713-32.835-11.136-48.25
+			c-7.423-15.418-17.89-27.412-31.405-35.976h38.54L303.2,0H178.441c-17.699,0-35.498,1.906-53.384,5.72
+			c-26.453,5.9-48.723,19.368-66.806,40.397C40.171,67.15,31.129,90.99,31.129,117.637c0,28.171,10.138,51.583,30.406,70.233
+			c20.269,18.649,44.585,27.978,72.945,27.978c5.71,0,12.371-0.478,19.985-1.427c-0.381,1.521-1.043,3.567-1.997,6.136
+			s-1.715,4.62-2.286,6.14c-0.57,1.521-1.047,3.375-1.425,5.566c-0.382,2.19-0.571,4.428-0.571,6.71
+			c0,12.563,6.086,26.744,18.271,42.541c-14.465,0.387-28.737,1.67-42.825,3.86c-14.084,2.19-28.833,5.616-44.252,10.28
+			c-15.417,4.661-29.217,11.42-41.396,20.27c-12.182,8.854-21.317,19.366-27.408,31.549C3.533,361.559,0.01,374.405,0.01,386.017
+			c0,12.751,2.857,24.314,8.565,34.69c5.708,10.369,13.035,18.842,21.982,25.406c8.945,6.57,19.273,12.083,30.978,16.562
+			c11.704,4.47,23.315,7.659,34.829,9.562c11.516,1.903,22.888,2.854,34.119,2.854c51.007,0,90.981-12.464,119.909-37.397
+			c26.648-23.223,39.971-50.062,39.971-80.517c0-10.855-1.57-20.984-4.712-30.409C282.51,317.337,278.42,309.254,273.372,302.498z
+			M163.311,198.722c-9.707,0-18.937-2.475-27.694-7.426c-8.757-4.95-16.18-11.374-22.27-19.273
+			c-6.088-7.898-11.418-16.796-15.987-26.695c-4.567-9.896-7.944-19.792-10.135-29.692c-2.19-9.895-3.284-19.318-3.284-28.265
+			c0-18.271,4.854-33.974,14.562-47.108c9.705-13.134,23.411-19.701,41.112-19.701c12.563,0,23.935,3.899,34.118,11.704
+			c10.183,7.804,18.177,17.701,23.984,29.692c5.802,11.991,10.277,24.407,13.417,37.257c3.14,12.847,4.711,24.983,4.711,36.403
+			c0,19.036-4.139,34.317-12.419,45.833C195.144,192.964,181.775,198.722,163.311,198.722z M242.251,413.123
+			c-5.23,8.949-12.319,15.94-21.267,20.981c-8.946,5.048-18.509,8.758-28.693,11.14c-10.183,2.385-20.889,3.572-32.12,3.572
+			c-12.182,0-24.27-1.431-36.258-4.284c-11.99-2.851-23.459-7.187-34.403-12.991c-10.944-5.8-19.795-13.798-26.551-23.982
+			c-6.757-10.184-10.135-21.744-10.135-34.69c0-11.419,2.568-21.601,7.708-30.55c5.142-8.945,11.709-16.084,19.702-21.408
+			c7.994-5.332,17.319-9.713,27.979-13.131c10.66-3.433,20.937-5.808,30.833-7.139c9.895-1.335,19.985-1.995,30.262-1.995
+			c6.283,0,11.043,0.191,14.277,0.567c1.143,0.767,4.043,2.759,8.708,5.996s7.804,5.428,9.423,6.57
+			c1.615,1.137,4.567,3.326,8.85,6.563c4.281,3.237,7.327,5.661,9.135,7.279c1.803,1.618,4.421,4.045,7.849,7.279
+			c3.424,3.237,5.948,6.043,7.566,8.422c1.615,2.378,3.616,5.28,5.996,8.702c2.38,3.433,4.043,6.715,4.998,9.855
+			c0.948,3.142,1.854,6.567,2.707,10.277c0.855,3.72,1.283,7.569,1.283,11.57C250.105,393.713,247.487,404.182,242.251,413.123z"/>
+			<polygon points="401.998,73.089 401.998,0 365.449,0 365.449,73.089 292.358,73.089 292.358,109.636 365.449,109.636 
+			365.449,182.725 401.998,182.725 401.998,109.636 475.081,109.636 475.081,73.089 		"/>
+		</g>
+	</symbol>
+
+	<symbol id="pinterest" viewBox="0 0 612 612">
+		<g>
+			<path d="M306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306c168.995,0,306-137.005,306-306
+			C612,137.004,474.995,0,306,0z M334.152,398.662c-22.616,0-43.897-12.49-51.213-26.678c0,0-12.157,49.294-14.744,58.808
+			c-4.34,16.079-12.713,32.131-20.475,44.844c-11.071,14.465-23.84,3.728-25.37-9.459c-0.5-14.688,0.028-32.074,3.672-47.902
+			c4.034-17.358,26.956-116.586,26.956-116.586s-6.704-13.659-6.704-33.855c0-31.713,17.999-55.386,40.42-55.386
+			c19.055,0,28.263,14.633,28.263,32.13c0,19.556-12.212,48.821-18.499,75.916c-5.258,22.7,11.155,41.199,33.076,41.199
+			c39.696,0,66.458-52.076,66.458-113.749c0-46.901-30.935-81.98-87.21-81.98c-63.565,0-103.178,48.403-103.178,102.454
+			c0,18.638,5.369,31.796,13.826,41.95c3.867,4.674,4.423,6.565,3.004,11.935c-1.001,3.95-3.31,13.408-4.256,17.163
+			c-1.391,5.425-5.703,7.345-10.488,5.342c-29.292-12.213-42.923-44.955-42.923-81.73c0-60.783,50.212-133.667,149.773-133.667
+			c80.005,0,132.665,59.114,132.665,122.567C447.232,335.96,401.527,398.662,334.152,398.662z"/>
+		</g>
+	</symbol>
+
+	<symbol id="instagram" viewBox="0 0 97.395 97.395">
+		<g>
+			<path d="M12.501,0h72.393c6.875,0,12.5,5.09,12.5,12.5v72.395c0,7.41-5.625,12.5-12.5,12.5H12.501C5.624,97.395,0,92.305,0,84.895
+			V12.5C0,5.09,5.624,0,12.501,0L12.501,0z M70.948,10.821c-2.412,0-4.383,1.972-4.383,4.385v10.495c0,2.412,1.971,4.385,4.383,4.385
+			h11.008c2.412,0,4.385-1.973,4.385-4.385V15.206c0-2.413-1.973-4.385-4.385-4.385H70.948L70.948,10.821z M86.387,41.188h-8.572
+			c0.811,2.648,1.25,5.453,1.25,8.355c0,16.2-13.556,29.332-30.275,29.332c-16.718,0-30.272-13.132-30.272-29.332
+			c0-2.904,0.438-5.708,1.25-8.355h-8.945v41.141c0,2.129,1.742,3.872,3.872,3.872h67.822c2.13,0,3.872-1.742,3.872-3.872V41.188
+			H86.387z M48.789,29.533c-10.802,0-19.56,8.485-19.56,18.953c0,10.468,8.758,18.953,19.56,18.953
+			c10.803,0,19.562-8.485,19.562-18.953C68.351,38.018,59.593,29.533,48.789,29.533z"/>
+		</g>
+	</symbol>
+
+	<symbol id="vkontakte" viewBox="0 0 96 96">
+			<g>
+				<path d="M53.174,52.908c-1.539-0.896-3.678-0.896-5.416-0.896h-5.707v11.76h5.238
+				c1.939,0,4.412,0.139,6.084-1.035c1.535-1.033,2.404-3.061,2.404-4.992C55.777,55.951,54.709,53.805,53.174,52.908z M51.021,42.865
+				c1.27-0.967,1.936-2.691,1.936-4.279c0-1.725-0.801-3.381-2.27-4.277c-1.537-0.896-4.346-0.689-6.15-0.689h-2.486v10.35h3.289
+				C47.211,43.969,49.418,44.107,51.021,42.865z M79.125,0H16.873C7.555,0,0,7.555,0,16.875v62.25C0,88.443,7.555,96,16.873,96h62.252
+				C88.443,96,96,88.443,96,79.125v-62.25C96,7.555,88.443,0,79.125,0z M50.604,72.535H30.992V25.201H52.42
+				c6.207,0,11.934,3.951,11.934,10.92c0,5.381-3.004,9.066-6.836,10.211v0.139c5.682,1.174,9.74,4.26,9.74,11.705
+				C67.258,65.066,62.566,72.535,50.604,72.535z"/>
+			</g>
+	</symbol>
+
+	<symbol id="rss" viewBox="0 0 559.372 559.372">
+		<g>
+			<path d="M53.244,0.002c46.512,0,91.29,6.018,134.334,18.054s83.334,29.07,120.869,51.102
+			c37.537,22.032,71.707,48.45,102.514,79.254c30.803,30.804,57.221,64.974,79.254,102.51
+			c22.029,37.539,39.063,77.828,51.102,120.873c12.037,43.043,18.055,87.818,18.055,134.334c0,14.688-5.201,27.23-15.605,37.637
+			c-10.404,10.407-22.949,15.604-37.637,15.604c-14.689,0-27.234-5.199-37.641-15.604c-10.402-10.404-15.604-22.949-15.604-37.637
+			c0-36.723-4.795-72.115-14.383-106.186c-9.588-34.064-23.055-65.891-40.395-95.471c-17.34-29.581-38.145-56.509-62.424-80.785
+			c-24.277-24.276-51.203-45.084-80.784-62.424c-29.58-17.34-61.404-30.804-95.472-40.392s-69.462-14.382-106.182-14.382
+			c-14.688,0-27.234-5.202-37.638-15.606S0.001,67.933,0.001,53.245s5.202-27.234,15.606-37.638
+			C26.01,5.204,38.556,0.002,53.244,0.002z M53.244,201.35c42.024,0,81.498,8.058,118.422,24.174s69.156,37.944,96.696,65.484
+			c27.541,27.541,49.369,59.771,65.484,96.693c16.117,36.928,24.174,76.398,24.174,118.426c0,14.688-5.201,27.23-15.604,37.637
+			c-10.404,10.404-22.949,15.604-37.641,15.604c-14.688,0-27.233-5.199-37.637-15.604c-10.404-10.404-15.606-22.949-15.606-37.637
+			c0-27.338-5.202-53.041-15.606-77.113c-10.404-24.072-24.582-45.084-42.534-63.035c-17.952-17.953-38.964-32.131-63.036-42.535
+			c-24.072-10.402-49.776-15.604-77.112-15.604c-14.688,0-27.234-5.201-37.638-15.605C5.202,281.83,0,269.284,0,254.596
+			s5.202-27.234,15.606-37.638C26.01,206.552,38.556,201.35,53.244,201.35z M151.164,481.033c0,10.609-1.938,20.4-5.814,29.377
+			c-3.876,8.979-9.18,16.83-15.912,23.563c-6.732,6.729-14.688,12.035-23.868,15.912c-9.18,3.875-18.87,5.811-29.07,5.811
+			c-10.608,0-20.4-1.938-29.376-5.811c-8.976-3.875-16.83-9.184-23.562-15.912c-6.732-6.732-12.036-14.586-15.912-23.563
+			c-3.876-8.977-5.814-18.768-5.814-29.377c0-10.197,1.938-19.889,5.814-29.066c3.876-9.184,9.18-17.139,15.912-23.869
+			c6.732-6.732,14.586-12.035,23.562-15.912c8.976-3.875,18.768-5.814,29.376-5.814c10.2,0,19.89,1.939,29.07,5.814
+			c9.18,3.877,17.136,9.18,23.868,15.912c6.732,6.73,12.036,14.688,15.912,23.869C149.226,461.145,151.164,470.834,151.164,481.033z
+			"/>
+		</g>
+	</symbol>
+
+</svg>
+
+
+<!-- Header
+================================== -->
+<header class="header" id="header">
+	<div class="container">
+		<div class="header__inner">
+			<img src="image/Logo.png" alt="AXIT">
+
+			<nav class="header__nav" id="header__nav">
+				<a class="header__link" href="#" data-scroll="#features">Features</a>
+				<a class="header__link" href="#" data-scroll="#about">About</a>
+				<a class="header__link" href="#" data-scroll="#pricing">Pricing</a>
+				<a class="header__link" href="#" data-scroll="#reviews">Reviews</a>
+				<a class="header__link" href="#" data-scroll="#contact">Contact</a>
+			</nav>
+
+			<button class="burger" type="button" id="navTooggle">
+                <span class="burger__item">Меню</span>
+            </button>
+
+		</div>
+	</div>
+
+</header>
+
+<!-- Intro
+================================== -->
+<div class="intro" id="intro">
+	<div class="container">
+		<div class="intro__inner">
+
+			<div class="intro__content">
+				<img class="intro__logo" src="image/Logo_2.png" alt="AXIT">
+				<h1 class="intro__title" >MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h1>
+				<h4 class="intro__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida r sit amet lacus accumsan et viverra justo commodo.</h4>
+				<button class="btn btn--white">Download</button>
+			</div>
+
+			<div class="intro__box">
+  			<div class="intro__form">
+  				<p class="form__title">Try Your <span>FREE</span> Trial Today</p>
+  				<div class="form__container">
+  					<input class="form__input" type="text" placeholder="Name" value="Name"> <br>
+  					<input class="form__input" type="email" placeholder="Email" value="Email"> <br>
+  					<input class="form__input" type="password" placeholder="Password" value="Password"> <br>
+  				</div>
+	
+				  <button class="form__button">Get Started</button>
+			  </div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<!-- Social
+================================== -->
+<div class="social">
+	<div class="container">
+		<div class="social__container">
+			<div class="social__text">
+				<h1 class="social__title">Social Media</h1>
+				<h3 class="social__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</h3>
+			</div>
+			
+
+
+			<div class="social__icon">
+
+                <a class="social__item" href="https://www.facebook.com/" target="_blank">
+                    <svg class="social__link">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+				</a>
+				
+				<a class="social__item" href="https://twitter.com/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#twitter"></use>
+					</svg>
+				</a>
+
+				<a class="social__item" href="https://www.google.ru/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#google"></use>
+					</svg>
+				</a>
+
+				<a class="social__item" href="https://www.pinterest.ru/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#pinterest"></use>
+					</svg>
+				</a>
+
+				<a class="social__item" href="https://www.instagram.com/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#instagram"></use>
+						<defs>
+							<linearGradient id="rect_gradient">
+							    <stop stop-color="#FDA24A" offset="0" />
+  								<stop stop-color="#EB4965" offset="0.5" />
+  								<stop stop-color="#A52EC1" offset="1" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+
+				<a class="social__item" href="https://vk.com/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#vkontakte"></use>
+
+						
+					</svg>
+				</a>
+
+				<a class="social__item" href="http://all-rss.ru/" target="_blank">
+					<svg class="social__link">
+						<use xlink:href="#rss"></use>
+					</svg>
+				</a>
+			
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Tab --
+=================================== -->
+<div class="features" id="features">
+	<div class="container">
+		<div class="features__inner">
+		
+			<div class="features__tabs">
+				<button class="features__link" onclick="openCity(event, 'Tab1')" id="defaultOpen">TAB 1</button>
+				<button class="features__link" onclick="openCity(event, 'Tab2')">TAB 2</button>
+				<button class="features__link" onclick="openCity(event, 'Tab3')">TAB 3</button>
+			</div>
+
+	
+			
+			<div id="Tab1" class="features__content">
+				<h3 class="features__title">Tabs 1 with soft transitioning effect.</h3>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+		
+				<button class="btn btn--opange">Download</button>
+				
+			</div>
+			
+			<div id="Tab2" class="features__content">
+				<h3 class="features__title">Tabs 2 with soft transitioning effect.</h3>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+		
+				<button class="btn btn--opange">Download</button>
+			</div>
+			
+			<div id="Tab3" class="features__content">
+				<h3 class="features__title">Tabs 3 with soft transitioning effect.</h3>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+		
+				<button class="btn btn--opange">Download</button>
+			</div>
+		
+			<div class="features__image">
+				<img class="feature__img" src="image/image_right_u255.png" alt="image_right_u255">
+			</div>
+		</div>
+	</div>
+</div> <!-- /features -->
+
+
+<!-- Section List --
+=================================== -->
+<section class="section__list">
+	<div class="container">
+		<div class="section__inner">
+			<img src="image/image_left_sub_list_u260.png" alt="u260">
+
+			<div class="section__container">
+				<h3 class="title">Sub list section</h3>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+	
+				<div class="section__box">
+					<div class="section__item">
+						<div class="section__icon"><img src="image/icon_up.png" alt="icon_up"></div>
+						<div class="section__text">
+							<h3 class="section__title">Title</h3>
+							<h4 class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</h4>
+						</div>
+					</div>
+	
+					<div class="section__item">
+						<div class="section__icon"><img src="image/icon_down.png" alt="icon_down"></div>
+						<div class="section__text">
+							<h3 class="section__title">Title</h3>
+							<h4 class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</h4>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+
+<!-- Section Picture --
+=================================== -->
+
+<section class="section__picture">
+	<div class="container">
+		<div class="picture__inner">
+
+			<div class="picture__container">
+				<h3 class="title">Standard Picture Section</h3>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+				<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+			</div>
+
+			<img src="image/image_right_standard_u262.png" alt="u262">
+		</div>
+	</div>
+</section>
+
+<!-- Our Process --
+=================================== -->
+
+<div class="container" id="about">
+	<div class="process">
+		<h1 class="process__title">Why this is awesome</h1>
+		<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+
+		<div class="process__inner">
+			<div class="process__item">
+				<img class="process__icon" src="image/thoughtful_design.png" alt="">
+				<p class="process_name">Thoughtful Design</p>
+				<p class="process__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+			</div>
+
+			<div class="process__item">
+				<img class="process__icon" src="image/thoughtful_design.png" alt="">
+				<p class="process_name">Thoughtful Design</p>
+				<p class="process__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+			</div>
+
+			<div class="process__item">
+				<img class="process__icon" src="image/thoughtful_design.png" alt="">
+				<p class="process_name">Thoughtful Design</p>
+				<p class="process__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!--Pricing Options
+=================================== -->
+
+<div class="pricing" id="pricing">
+	<div class="container">
+		<div class="pricing__inner">
+			<h1 class="pricing__title">Pricing options</h1>
+			<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+			<div class="pricing_container">
+				<div class="pricing__item pricing_one">
+					<div class="pricing__header"><p>Basic</p></div>
+					<div class="price">
+						<span class="price__s">$</span>
+						<span class="price__value">0</span><br>
+						<span class="price__name">Free for Life</span>
+					</div>
+					<div class="price_list">
+						<ul class="price__ul">
+							<li class="price__li">1 GB OF SPACE</li>
+							<li class="price__li">10 GB OF BANDWIDTH</li>
+							<li class="price__li">3 WEBSITES</li>
+							<li class="price__li">BASIC CUSTOMIZATION</li>
+							<li class="price__li">WOEDPRESS INTEGRATION</li>
+							<li class="price__li">EMAIL SUPPORT</li>
+						</ul>
+					</div>
+				</div>
+		
+				<div class="pricing__item pricing_two">
+					<div class="pricing__header"><p>Professional</p></div>
+					<div class="price">
+						<span class="price__s">$</span>
+						<span class="price__value">1</span>
+						<span class="price__value">9</span><br>
+						<span class="price__name">Monthly Payment</span>
+					</div>
+					<div class="price__popular"><p>OUR MOST POPULAR</p></div>
+					<div class="price_list">
+						<ul class="price__ul">
+							<li class="price__li">5 GB OF SPACE</li>
+							<li class="price__li">50 GB OF BANDWIDTH</li>
+							<li class="price__li">12 WEBSITES</li>
+							<li class="price__li">ADVANCED CUSTOMIZATION</li>
+							<li class="price__li">WOEDPRESS INTEGRATION</li>
+							<li class="price__li">EMAIL SUPPORT</li>
+						</ul>
+					</div>
+				</div>
+		
+				<div class="pricing__item pricing_tree">
+					<div class="pricing__header"><p>Enterprise</p></div>
+					<div class="price">
+						<span class="price__s">$</span>
+						<span class="price__value">7</span>
+						<span class="price__value">0</span><br>
+						<span class="price__name">Monthly Payment</span>
+					</div>
+					<div class="price_list">
+						<ul class="price__ul">
+							<li class="price__li">UNLIMITED SPACE</li>
+							<li class="price__li">UNLIMITED BANDWIDTH</li>
+							<li class="price__li">100 WEBSITES</li>
+							<li class="price__li">ADVANCED CUSTOMIZATION</li>
+							<li class="price__li">WOEDPRESS INTEGRATION</li>
+							<li class="price__li">24/7 CUSTOMER SUPPORT</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Reviews 
+=================================== -->
+<div class="container" id="reviews">
+	<div class="review__inner">
+		<div class="review__box">
+  		<h1 class="review__title">What our customers are saying</h1>
+  		<p class="suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+
+		<div class="review__container">
+
+			<div class="review__item">
+				<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+				<div class="review__block">
+					<img src="image/avatar_2_u231.png" alt="avatar_2_u231">
+					<div class="review__content">
+						<h3 class="review__name">Jeremy H.</h3>
+						<h4 class="review__prof">Manager</h4>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="review__item">
+				<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+				<div class="review__block">
+					<img src="image/avatar_2_u231.png" alt="avatar_2_u231">
+					
+					<div class="review__content">
+						<h3 class="review__name">Jeremy H.</h3>
+						<h4 class="review__prof">Manager</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="review__item">
+				<div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex, architecto eaque quo suscipit.</div>
+				<div class="review__block">
+					<img src="image/avatar_2_u231.png" alt="avatar_2_u231">
+
+					<div class="review__content">
+						<h3 class="review__name">Jeremy H.</h3>
+						<h4 class="review__prof">Manager</h4>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!--Custom Section
+=================================== -->
+
+<section class="custom">
+	<div class="container">
+		<div class="custom__inner">
+
+			<h1 class="custom__title">STYLISH AXURE DESIGN</h1>
+			<p class="custom__suptitle">Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</p>
+			<button class="btn btn--white">Download</button>
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+<!--Contact Us
+=================================== -->
+<section class="contact" id="contact">
+	<div class="container">
+		<div class="contact__inner">
+      
+			<div class="contact__box">
+			<h1 class="conatct__title">CONTACT US</h1>
+			<p class="contact__suptitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+      
+			<form class="conatct__from">
+        
+				<div class="form__info">
+  					<input class="form__input" type="text" placeholder="Name" name="Name">
+  					<input class="form__input" type="email" placeholder="Email" name="Email">
+  					<input class="form__input" type="text" placeholder="Subject" name="Subject">
+  				</div>
+				  
+				<div class="form__msg">
+					<textarea class="form__textarea" rows="9" cols="45" placeholder="Message" name="Message"></textarea>
+				</div>
+				
+				<div class="form__btn">
+					<button class="btn btn--opange">Send Message</button>
+				</div>
+			
+			</form>
+	  
+		</div>
+	</div>
+</section>
+
+<!--Footer
+=================================== -->
+<footer class="footer">
+	<div class="footer__icon">
+
+		<a class="footer__item" href="https://www.facebook.com/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#facebook"></use>
+			</svg>
+		</a>
+			
+		<a class="footer__item" href="https://twitter.com/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#twitter"></use>
+			</svg>
+		</a>
+
+		<a class="footer__item" href="https://www.google.ru/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#google"></use>
+			</svg>
+		</a>
+
+		<a class="footer__item" href="https://www.pinterest.ru/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#pinterest"></use>
+			</svg>
+		</a>
+
+		<a class="footer__item" href="https://www.instagram.com/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#instagram"></use>
+
+			</svg>
+		</a>
+
+		<a class="footer__item" href="https://vk.com/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#vkontakte"></use>
+			</svg>
+		</a>
+
+		<a class="footer__item" href="http://all-rss.ru/" target="_blank">
+			<svg class="footer__link">
+				<use xlink:href="#rss"></use>
+			</svg>
+		</a>
+		
+	</div>
+	<small class="footer__copyright">© 2015 Axure Themes</small>
+</footer>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/jq_app.js"></script>
+</body>
+</html>
